@@ -2,21 +2,22 @@
 # https://github.com/riggraz/no-style-please#customize-the-menu
 
 entries:
-  - title: info
+  - title: Social Links
     entries:
       - title: Twitter --> https://x.com/Sharp_Sec
       - title: GitHub --> https://github.com/SS-343/
+      - title: LinkedIn --> https://www.linkedin.com/in/grant-stevens-51b3951a9/
         #url: https://github.com/SS-343/
       #- title: "used by <a href='https://riggraz.dev'>riggraz.dev</a> and <a href='https://github.com/riggraz/no-style-please/network/dependents'>many others</a>"
 
-  - title: all posts
+  - title: Write-Ups
     post_list:
       limit: 5
       show_more: true
       show_more_text: See archive...
       show_more_url: archive.html
 
-  - title: posts by category
+  - title: Certification Reviews 
     post_list:
       category: example2
       show_more: true
@@ -26,7 +27,7 @@ entries:
   - title: rss
     url: feed.xml
   
-  - title: another list
+  - title: Other Stuff...
     entries:
       - title: with subitems
         entries:
