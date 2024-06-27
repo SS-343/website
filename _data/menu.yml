@@ -2,7 +2,7 @@
 # https://github.com/riggraz/no-style-please#customize-the-menu
 
 entries:
-  - title: whoami /all
+  - title: "whoami /all"
       entries: 
         - title: Grant Stevens
         - title: Security Operations Center Intern
