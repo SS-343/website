@@ -237,7 +237,7 @@
 	  `;
 
   document.head.appendChild(style);
-  //nekoEl.addEventListener('click', explodeHearts);
+  nekoEl.addEventListener('click', explodeHearts);
 
   function frame() {
     frameCount += 1;
