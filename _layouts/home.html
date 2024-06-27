@@ -6,17 +6,9 @@ layout: default
   {%-if site.theme_config.show_description-%}
     <p>{{ site.description }}</p>
   {%-endif-%}
+<script src="assets/js/oneko.js"></script>
 </header>
 {%-include menu_item.html collection=site.data.menu.entries-%}
 
 {{ content }}
-<html>
-<body>
-<!--[if IE]>
-  <script src="./oneko-ie6.js"></script>
-<![endif]-->
-<!--[if !IE]><!-->
-  <script src="./oneko.js"></script>
-<!--<![endif]-->
-</body>
-</html>
+
