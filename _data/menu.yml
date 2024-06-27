@@ -3,10 +3,10 @@
 
 entries:
   - title: "whoami /all"
-      entries: 
-        - title: Grant Stevens
-        - title: Security Operations Center Intern
-        - title: Senior at USF
+    entries: 
+      - title: Grant Stevens
+      - title: Security Operations Center Intern
+      - title: Senior at USF
 
   - title: Social Links
     entries:
