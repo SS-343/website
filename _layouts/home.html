@@ -7,9 +7,10 @@ layout: default
     <p>{{ site.description }}</p>
   {%-endif-%}
 </header>
-
+<body>
 {%-include menu_item.html collection=site.data.menu.entries-%}
 
 {{ content }}
 
 <script src="/assets/js/oneko.js"></script>
+</body>
