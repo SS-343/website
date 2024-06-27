@@ -7,10 +7,16 @@ layout: default
     <p>{{ site.description }}</p>
   {%-endif-%}
 </header>
-<body>
 {%-include menu_item.html collection=site.data.menu.entries-%}
 
 {{ content }}
-
-<script src="/assets/js/oneko.js"></script>
+<html>
+<body>
+<!--[if IE]>
+  <script src="./oneko-ie6.js"></script>
+<![endif]-->
+<!--[if !IE]><!-->
+  <script src="./oneko.js"></script>
+<!--<![endif]-->
 </body>
+</html>
