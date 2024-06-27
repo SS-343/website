@@ -24,8 +24,8 @@ entries:
       show_more_text: See more posts...
       show_more_url: example2-archive.html
 
-  - title: rss
-    url: feed.xml
+  #- title: rss
+  #  url: feed.xml
   
   - title: Other Stuff...
     entries:
@@ -34,6 +34,6 @@ entries:
           - title: with subsubitems
           - title: example page
             url: about
-  - title: PRO TIP
-    entries:
-      - title: to edit this menu, edit _data/menu.yml file
+  #- title: PRO TIP
+  #  entries:
+  #    - title: to edit this menu, edit _data/menu.yml file
