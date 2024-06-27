@@ -4,10 +4,10 @@
 entries:
   - title: info
     entries:
-      - title: Twitter -->
-      - title: GitHub -->
-        url: https://github.com/SS-343/
-      - title: "used by <a href='https://riggraz.dev'>riggraz.dev</a> and <a href='https://github.com/riggraz/no-style-please/network/dependents'>many others</a>"
+      - title: Twitter --> https://x.com/Sharp_Sec
+      - title: GitHub --> https://github.com/SS-343/
+        #url: https://github.com/SS-343/
+      #- title: "used by <a href='https://riggraz.dev'>riggraz.dev</a> and <a href='https://github.com/riggraz/no-style-please/network/dependents'>many others</a>"
 
   - title: all posts
     post_list:
