@@ -14,11 +14,12 @@
             box-sizing: border-box; /* Ensures margin doesn't add to width */
         }
   </style>
-</head>
-<body a="{{ site.theme_config.appearance | default: "dark" }}">
   <div id="boot-screen">
       <pre id="boot-text"></pre>
     </div>
+</head>
+<body a="{{ site.theme_config.appearance | default: "dark" }}">
+  
   <main class="page-content" aria-label="Content">
     {{ content }}
     {%- if site.goat_counter and jekyll.environment == "production" -%}
