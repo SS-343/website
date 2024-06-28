@@ -3,10 +3,7 @@
   {%- include head.html -%}
   <body a="{{ site.theme_config.appearance | default: "dark" }}">
     <main class="page-content" aria-label="Content">
-      <div class="w">
-        <div id="boot-screen">
-        <pre id="boot-text"></pre>
-    </div>
+      
         {{ content }}
         <script src="assets/js/booteffect.js"></script>
         <script src="assets/js/oneko.js"></script>
