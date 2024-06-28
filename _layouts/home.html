@@ -4,7 +4,6 @@ layout: default
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: "en" }}">
 <head>
-   <script src="{{ '/assets/js/booteffect.js' | relative_url }}"></script>
   {%- include head.html -%}
 </head>
 <body>
@@ -20,6 +19,6 @@ layout: default
 
 {{ content }}
 
-
+<script src="{{ '/assets/js/booteffect.js' | relative_url }}"></script>
 </body>
 </html>
