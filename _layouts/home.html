@@ -1,17 +1,25 @@
 ---
 layout: default
 ---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: "en" }}">
+<head>
+  {%- include head.html -%}
+</head>
+<body>
+
 <header>
   <h1>{{ site.title }}</h1>
-  {%-if site.theme_config.show_description-%}
+  {%- if site.theme_config.show_description -%}
     <p>{{ site.description }}</p>
-  {%-endif-%}
-  
+  {%- endif -%}
 </header>
-{%-include menu_item.html collection=site.data.menu.entries-%}
+
+{%- include menu_item.html collection=site.data.menu.entries -%}
 
 {{ content }}
 
-<body>
-  <script src="assets/js/booteffect.js"></script>
+<script src="{{ '/assets/js/booteffect.js' | relative_url }}"></script>
+
 </body>
+</html>
