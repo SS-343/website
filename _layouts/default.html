@@ -2,6 +2,18 @@
 <html lang="{{ page.lang | default: "en" }}">
 <head>
   {%- include head.html -%}
+  <style>
+    .gif-jail {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Optional: Centers images horizontally */
+        }
+    .gif-jail img {
+            width: 20%; /* Adjust width as per your layout */
+            margin: 5px; /* Adjust margin as per your design */
+            box-sizing: border-box; /* Ensures margin doesn't add to width */
+        }
+  </style>
 </head>
 <body a="{{ site.theme_config.appearance | default: "dark" }}">
   <div id="boot-screen">
@@ -22,9 +34,12 @@
     <script src="{{ '/assets/js/booteffect.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/oneko.js' | relative_url }}"></script>
   </main>
-  <hr/>
+  <div class="gif-jail">
   <img src="assets/amd_powered.gif">
-  <img src="assets/coffee.gif"><img src="assets/ie_rainbow.gif"><img src="assets/insanity.gif"><img src="assets/cyberrealmrefer.gif">
-  <hr/>
+  <img src="assets/coffee.gif">
+  <img src="assets/ie_rainbow.gif">
+  <img src="assets/insanity.gif">
+  <img src="assets/cyberrealmrefer.gif">
+  </div>
 </body>
 </html>
