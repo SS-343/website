@@ -6,10 +6,10 @@
 <body a="{{ site.theme_config.appearance | default: "dark" }}">
   
   <main class="page-content" aria-label="Content">
-     <div id="boot-screen">
-        <pre id="boot-text"></pre>
+    <div id="boot-screen">
+      <pre id="boot-text"></pre>
     </div>
-         {{ content }}
+    {{ content }}
     {%- if site.goat_counter and jekyll.environment == "production" -%}
       {%- include goat_counter.html -%}
     {%- endif -%}
@@ -22,7 +22,6 @@
 
     <script src="{{ '/assets/js/booteffect.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/oneko.js' | relative_url }}"></script>
-
   </main>
 </body>
 </html>
