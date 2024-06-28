@@ -21,7 +21,7 @@
 <body a="{{ site.theme_config.appearance | default: "dark" }}">
   
   <main class="page-content" aria-label="Content">
-    {{ content }}
+    
     {%- if site.goat_counter and jekyll.environment == "production" -%}
       {%- include goat_counter.html -%}
     {%- endif -%}
@@ -36,6 +36,7 @@
     <script src="{{ '/assets/js/booteffect.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/oneko.js' | relative_url }}"></script>
   </main>
+  {{ content }}
   <div class="gif-jail">
   <img src="assets/amd_powered.gif" width="88" height="31">
   <img src="assets/coffee.gif" width="88" height="31">
