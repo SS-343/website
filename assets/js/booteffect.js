@@ -1,5 +1,5 @@
 const bootText = `
- OS v.3.1
+Singularity OS v.3.1
 (c)2003-2015 Microsoft Research Labratory 
 To enter recovery mode,
 press ESC...
