@@ -4,15 +4,11 @@
   {%- include head.html -%}
 </head>
 <body a="{{ site.theme_config.appearance | default: "dark" }}">
-  <main class="page-content" aria-label="Content">
-    <div class="w">
-      <div id="boot-screen">
+   <div id="boot-screen">
         <pre id="boot-text"></pre>
-      </div>
-
-      {{ content }}
     </div>
-
+  <main class="page-content" aria-label="Content">
+         {{ content }}
     {%- if site.goat_counter and jekyll.environment == "production" -%}
       {%- include goat_counter.html -%}
     {%- endif -%}
@@ -26,14 +22,6 @@
     <script src="{{ '/assets/js/booteffect.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/oneko.js' | relative_url }}"></script>
 
-    <script>
-      // Hide boot screen and show content when boot effect finishes
-      window.onload = function() {
-        var bootScreen = document.getElementById('boot-screen');
-        bootScreen.style.display = 'none'; // Hide boot screen
-        document.querySelector('.w').style.display = 'block'; // Show content
-      };
-    </script>
   </main>
 </body>
 </html>
