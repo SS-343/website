@@ -22,11 +22,12 @@ function typeBootText() {
     if (i < bootText.length) {
         document.getElementById('boot-text').innerHTML += bootText.charAt(i);
         i++;
-        setTimeout(typeBootText, Math.random() * 10 + 20);  // Vary typing speed for effect
+        setTimeout(typeBootText, 50); // Adjust timing if needed
     } else {
         setTimeout(() => {
-            document.getElementById('boot-screen').style.display = 'none';  // Hide boot screen after a 1s delay
-        }, 100);
+            document.getElementById('boot-screen').style.display = 'none'; // Hide boot screen after a delay
+            document.querySelector('.w').style.display = 'block'; // Show main content
+        }, 1500); // Adjust delay if needed
     }
 }
 
