@@ -63,4 +63,18 @@
 
   {% if page.custom_js %}
     {% for js_file in page.custom_js %}
-      <script type="text/javascript" src
+      <script type="text/javascript" src="{{ site.baseurl }}/assets/js/{{ js_file }}.js"></script>
+    {% endfor %}
+  {% endif %}
+
+  <script src="{{ '/assets/js/booteffect.js' | relative_url }}"></script>
+
+  <script>
+    // After boot effect finishes, show the page content
+    window.onload = function() {
+      document.getElementById('boot-screen').style.display = 'none';
+      document.querySelector('.page-content').style.display = 'block';
+    };
+  </script>
+</body>
+</html>
