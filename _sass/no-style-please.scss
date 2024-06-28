@@ -90,7 +90,8 @@ img {
 }
 
 
-#boot-screen {
+w {
+  #boot-screen {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -148,4 +149,5 @@ img {
         transparent 1px,
         transparent 2px
     );
+}
 }
