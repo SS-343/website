@@ -21,7 +21,7 @@
 <body a="{{ site.theme_config.appearance | default: "dark" }}">
   
   <main class="page-content" aria-label="Content">
-    
+    {{ content }}
     {%- if site.goat_counter and jekyll.environment == "production" -%}
       {%- include goat_counter.html -%}
     {%- endif -%}
@@ -29,7 +29,6 @@
     {% if page.custom_js %}
       {% for js_file in page.custom_js %}
         <script type="text/javascript" src="{{ site.baseurl }}/assets/js/{{ js_file }}.js"></script>
-          {{ content }}
       {% endfor %}
     {% endif %}
 
