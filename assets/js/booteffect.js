@@ -26,7 +26,7 @@ function typeBootText() {
     } else {
         setTimeout(() => {
             document.getElementById('boot-screen').style.display = 'none';  // Hide boot screen after a 1s delay
-        }, 1300);
+        }, 100);
     }
 }
 
