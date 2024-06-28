@@ -7,7 +7,7 @@
    <div id="boot-screen">
         <pre id="boot-text"></pre>
     </div>
-  <main class="page-content" aria-label="Content">
+  <main style="text-align: center" class="page-content" aria-label="Content">
          {{ content }}
     {%- if site.goat_counter and jekyll.environment == "production" -%}
       {%- include goat_counter.html -%}
