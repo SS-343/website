@@ -6,8 +6,12 @@ layout: default
   {%-if site.theme_config.show_description-%}
     <p>{{ site.description }}</p>
   {%-endif-%}
+  
 </header>
 {%-include menu_item.html collection=site.data.menu.entries-%}
 
 {{ content }}
 
+<body>
+  <script src="assets/js/booteffect.js"></script>
+</body>
