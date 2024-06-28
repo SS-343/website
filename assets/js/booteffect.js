@@ -1,6 +1,6 @@
 const bootText = `
-Copland OS v.3.1
-(c)1998-2023 Tachibana Labs
+ OS v.3.1
+(c)2003-2015 Microsoft Research Labratory 
 To enter recovery mode,
 press ESC...
 
@@ -10,10 +10,9 @@ Loading modules...usp.. ok
 Loading modules...hci.. ok
 Loading modules...net.. ok
 
-Starting Copland OS...
+Starting Singularity OS...
 
 Welcome back, User.
-Let's all love Lain.
 `;
 
 let i = 0;
@@ -22,7 +21,7 @@ function typeBootText() {
     if (i < bootText.length) {
         document.getElementById('boot-text').innerHTML += bootText.charAt(i);
         i++;
-        setTimeout(typeBootText, 50); // Adjust timing if needed
+        setTimeout(typeBootText, Math.random() * 10 + 20); // Adjust timing if needed
     } else {
         setTimeout(() => {
             document.getElementById('boot-screen').style.display = 'none'; // Hide boot screen after a delay
