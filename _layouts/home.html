@@ -1,12 +1,56 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: "en" }}">
+<head>
+  {%- include head.html -%}
+  <style>
+    .gif-jail {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Optional: Centers images horizontally */
+        }
+    .gif-jail img {
+            width: 20%; /* Adjust width as per your layout */
+            margin: 5px; /* Adjust margin as per your design */
+            box-sizing: border-box; /* Ensures margin doesn't add to width */
+        }
+  </style>
+  <div id="boot-screen">
+      <pre id="boot-text"></pre>
+    </div>
+</head>
+<body a="{{ site.theme_config.appearance | default: "dark" }}">
+  
+  <main class="page-content" aria-label="Content">
+    {{ content }}
+    {%- if site.goat_counter and jekyll.environment == "production" -%}
+      {%- include goat_counter.html -%}
+    {%- endif -%}
 
-<header>
-  <h1>{{ site.title }}</h1>
-  {%-if site.theme_config.show_description-%}
-    <p>{{ site.description }}</p>
-  {%-endif-%}
-</header>
+    {% if page.custom_js %}
+      {% for js_file in page.custom_js %}
+        <script type="text/javascript" src="{{ site.baseurl }}/assets/js/{{ js_file }}.js"></script>
+      {% endfor %}
+    {% endif %}
 
-{%-include menu_item.html collection=site.data.menu.entries-%}
-
-{{ content }}
-
+    <script src="{{ '/assets/js/booteffect.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/oneko.js' | relative_url }}"></script>
+  </main>
+  <div>
+      {{ content }}
+  </div>
+  <div class="gif-jail">
+  <img src="assets/amd_powered.gif" width="88" height="31">
+  <img src="assets/coffee.gif" width="88" height="31">
+  <img src="assets/ie_rainbow.gif" width="88" height="31">
+  <img src="assets/insanity.gif" width="88" height="31">
+  <img src="assets/cyberrealmrefer.gif" width="88" height="31">
+  <img src="assets/ns-now.gif" width="88" height="31">
+  <img src="assets/volta.gif" width="88" height="31">
+  <img src="assets/knbutton.gif" width="88" height="31">
+  <img src="assets/magic.gif" width="88" height="31">
+  <img src="assets/powered.gif" width="88" height="31">
+  <img src="assets/poweredbyasm_88x31.gif" width="88" height="31">
+  <img src="assets/neocities3.gif" width="88" height="31">
+  </div>
+</body>
+</html>
