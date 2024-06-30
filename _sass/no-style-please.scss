@@ -1,132 +1,97 @@
-body[a="light"] {
-	filter: invert(1)
+// -------------- THEME SWITCHER -------------- //
+@mixin dark-appearance {
+  filter: invert(1);
+  img {
+    filter: invert(1);
+
+    &.ioda { filter: invert(0); }
+  }
 }
 
-body[a="light"] img {
-	filter: invert(1)
+body[a="dark"] { @include dark-appearance; }
+
+
+@media (prefers-color-scheme: dark) {
+  body[a="auto"] { @include dark-appearance; }
 }
+// -------------------------------------------- //
 
-body[a="light"] img.ioda {
-	filter: invert(0)
-}
+// bg color is also needed in html in order to
+// block body's background propagation
+// see: https://stackoverflow.com/a/61265706
+html, body { background: white; }
 
-@media (prefers-color-scheme: light) {
-	body[a="light"] {
-		filter: invert(1)
-	}
-
-	body[a="light"] img {
-		filter: invert(1)
-	}
-
-	body[a="light"] img.ioda {
-		filter: invert(0)
-	}
-}
-
-html,
-body {
-	background: black;
-	text-align: center;
-}
-
-html {
-	height: 100%
-}
+html { height: 100%; }
 
 body {
-	color: white;
-	font-family: monospace;
-	font-size: 16px;
-	line-height: 1.4;
-	margin: 0;
-	min-height: 100%;
-	overflow-wrap: break-word
+  color: black;
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 0;
+  min-height: 100%;
+  overflow-wrap: break-word;
 }
 
-.post-meta {
-	text-align: right
-}
+.post-meta { text-align: right; }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin-top: 3rem
-}
+h2, h3, h4, h5, h6 { margin-top: 3rem; }
 
-hr {
-	margin: 2rem 0
-}
+hr { margin: 2rem 0; }
 
-p {
-	margin: 1rem 0
-}
+p { margin: 1rem 0; }
 
-li {
-	margin: 0.4rem 0
-}
+li { margin: 0.4rem 0; }
 
-*:target {
-	background: green
-}
-
-a:link {
-	color: #87f087
-}
-
-a:visited {
-	color: #87f087
-}
+*:target { background: yellow; }
 
 .w {
-	max-width: 640px;
-	margin: 0 auto;
-	padding: 4rem 2rem
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
 }
 
 hr {
-	text-align: center;
-	border: 0
+  text-align: center;
+  border: 0;
+
+  &:before { content: '/////' }
+  &:after { content: attr(data-content) '/////' }
 }
 
-hr:before {
-	content: "/////"
+table { width: 100%; }
+
+table, th, td {
+  border: thin solid black;
+  border-collapse: collapse;
+  padding: 0.4rem;
 }
 
-hr:after {
-	content: attr(data-content) "/////"
+code {
+  color: white;
+  background: black;
 }
 
-table {
-	width: 100%
-}
-
-table,
-th,
-td {
-	border: thin solid white;
-	border-collapse: collapse;
-	padding: 0.4rem
+div.highlighter-rouge code {
+  display: block;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  padding: 1rem;
 }
 
 blockquote {
-	font-style: italic;
-	border: thin solid white;
-	padding: 1rem
-}
+  font-style: italic;
+  border: thin solid black;
+  padding: 1rem;
 
-blockquote p {
-	margin: 0
+  p { margin: 0; }
 }
 
 img {
-	max-width: 100%;
-	display: block;
-	margin: 0 auto
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
 }
-
 
 #boot-screen {
   position: absolute;
