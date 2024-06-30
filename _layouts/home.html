@@ -19,7 +19,8 @@
 <body a="{{ site.theme_config.appearance | default: "dark" }}">
   
   <main class="page-content" aria-label="Content">
-  {{ content }}
+    {%-include menu_item.html collection=site.data.menu.entries-%}
+      {{ content }}
     {%- if site.goat_counter and jekyll.environment == "production" -%}
       {%- include goat_counter.html -%}
     {%- endif -%}
