@@ -36,16 +36,18 @@
       margin: 5px; /* Adjust margin as per your design */
       box-sizing: border-box; /* Ensures margin doesn't add to width */
     }
-    .center-text {
-      text-align: center;
+    .centered-container {
+      max-width: 800px; /* or any width you prefer */
+      margin: 0 auto; /* centers the container */
+      padding: 0 20px; /* optional, for some padding */
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1 class="center-text">Sharp-Sec</h1>
+  <header class="centered-container">
+    <h1>Sharp-Sec</h1>
   </header>
-  <main class="page-content center-text" aria-label="Content">
+  <main class="page-content centered-container" aria-label="Content">
     <ul>
       <li>whoami /all</li>
       <ul>
