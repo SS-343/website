@@ -8,7 +8,7 @@
   }
 }
 
-body[a="dark"] { @include dark-appearance; }
+body[a="light"] { @include dark-appearance; }
 
 
 @media (prefers-color-scheme: dark) {
