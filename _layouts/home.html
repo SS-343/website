@@ -20,7 +20,7 @@
   {%-endif-%}
 </head>
 <body a="{{ site.theme_config.appearance | default: "dark" }}">
-  
+  <div class="hr">
   <main class="page-content" aria-label="Content">
     {%-include menu_item.html collection=site.data.menu.entries-%}
       {{ content }}
@@ -41,6 +41,7 @@
       <pre id="boot-text"></pre>
     </div> -->
   {{  content  }}
+    </div>
   </main>
   <div class="gif-jail">
   <img src="assets/amd_powered.gif" width="88" height="31">
