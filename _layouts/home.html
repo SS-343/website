@@ -27,15 +27,18 @@
   <link rel="stylesheet" href="/assets/css/main.css" />
   <style>
     .gif-jail {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center; /* Optional: Centers images horizontally */
-    }
-    .gif-jail img {
-      width: 20%; /* Adjust width as per your layout */
-      margin: 5px; /* Adjust margin as per your design */
-      box-sizing: border-box; /* Ensures margin doesn't add to width */
-    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers images horizontally */
+      }
+  .gif-jail img {
+    width: 88px;  /* Fixed width */
+    height: 31px; /* Fixed height */
+    margin: 5px;  /* Adjust margin as per your design */
+    box-sizing: border-box; /* Ensures margin doesn't add to width */
+    object-fit: cover; /* Ensures image is scaled correctly */
+      }
+
     .centered-container {
       max-width: 800px; /* or any width you prefer */
       margin: 0 auto; /* centers the container */
