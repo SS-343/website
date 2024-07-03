@@ -27,10 +27,12 @@
   <link rel="stylesheet" href="/assets/css/main.css" />
   <style>
     .gif-jail {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centers images horizontally */
-      }
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 10px; /* Adjust as per your design */
+      justify-content: center;
+    }
   .gif-jail img {
     width: 88px;  /* Fixed width */
     height: 31px; /* Fixed height */
