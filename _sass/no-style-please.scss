@@ -1,10 +1,10 @@
 // -------------- THEME SWITCHER -------------- //
 @mixin dark-appearance {
-  filter: invert(1);
+  filter: invert(0);
   img {
     filter: invert(1);
 
-    &.ioda { filter: invert(1); }
+    &.ioda { filter: invert(0); }
   }
 }
 
@@ -19,7 +19,7 @@ body[a="dark"] { @include dark-appearance; }
 // bg color is also needed in html in order to
 // block body's background propagation
 // see: https://stackoverflow.com/a/61265706
-html, body { background: Black; }
+html, body { background: White; }
 
 html { height: 100%; }
 
